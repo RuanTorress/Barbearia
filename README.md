@@ -67,7 +67,7 @@ Autor: Ruan torres
 Fala comigo: https://ruantorress.github.io/bio-Ruan/
 
 se quiser 
-olha mais  o projeto da barbearia: https://ruantorress.github.io/Barbearia-/
+olha mais  o projeto da barbearia: https://ruantorress.github.io/Barbearia/
 
  <p>
             Feito por
