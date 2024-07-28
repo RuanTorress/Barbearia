@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/root.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/penteado.png" type="image/x-icon" />
+    <title>Barbearia Providência</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="container">
+    
+            <h1 class="logo">
+                <img src="assets/images/clientes/bigode.png" alt="Logo da Barbearia Providência">
+                Barbearia Providência
+            </h1>
+            <ul class="navbar-items">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="showcase">
+        <div id="carousel">
+            <div class="carousel-slide">
+                <img src="assets/images/Post/post-1.jpg" alt="Imagem 1">
+                <img src="assets/images/Post/post-3.jpg" alt="Imagem 2">
+                <img src="assets/images/Post/post2.jpg" alt="Imagem 3">
+                <img src="assets/images/Serviços/maquina.jpg" alt="Imagem 4">
+                <img src="assets/images/Serviços/corte.jpg" alt="Imagem 5">
+            </div>
+        </div>
+        <div id="showcase-container">
+            <h2>Bem-vindo à Barbearia Providência</h2>
+            <p>Oferecemos serviços de alta qualidade para destacar seu estilo.</p>
+            <a href="#servicos" class="btn">Nossos Serviços</a>
+        </div>
+    </header>
+
+    <!--Serviços-->
+    <section id="servicos">
+        <div class="headline">Nossos Serviços</div>
+        <div class="servicos-container">
+
+            <div class="servico-item">
+                <img class="servico" src="assets/images/Serviços/barba.jpg" alt="Barba">
+                <h3>Barba</h3>
+            </div>
+            <div class="servico-item">
+                <img class="servico" src="assets/images/Serviços/corte.jpg" alt="Corte">
+                <h3>Corte</h3>
+            </div>
+            <div class="servico-item">
+                <img class="servico" src="assets/images/Serviços/dia-do-noivo.jpg" alt="Dia do Noivo">
+                <h3>Dia do Noivo</h3>
+            </div>
+            <div class="servico-item">
+                <img class="servico" src="assets/images/Serviços/escova-progressiva.jpg" alt="Escova Progressiva">
+                <h3>Escova Progressiva</h3>
+            </div>
+            <div class="servico-item">
+                <img class="servico" src="assets/images/Serviços/maquina.jpg" alt="Máquina">
+                <h3>Máquina</h3>
+            </div>
+            <div class="servico-item">
+                <img class="servico" src="assets/images/Serviços/sobrancelha.jpg" alt="Sobrancelha">
+                <h3>Sobrancelha</h3>
+            </div>
+        </div>
+    </section>
+
+      <!--depoimento dos clientes-->
+    <section id="features">
+        <div class="headline">O que fazemos</div>
+
+
+        <div class="testimonials-container">
+
+            <div class="testimonial">
+                <img src="assets/images/clientes/04.jfif" alt="Cliente 1" class="testimonial-img">
+                <div class="testimonial-content">
+                    <h3>João Silva</h3>
+                    <p>"Serviço excelente! A equipe é muito atenciosa e o ambiente é super acolhedor. Recomendo a todos!"</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="assets/images/clientes/02.jfif" alt="Cliente 2" class="testimonial-img">
+                <div class="testimonial-content">
+                    <h3>Maria Oliveira</h3>
+                    <p>"Adorei o corte e a barba! O pessoal entende muito de estilo e sabem exatamente o que o cliente quer."</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="assets/images/clientes/03.jfif" alt="Cliente 3" class="testimonial-img">
+                <div class="testimonial-content">
+                    <h3>Carlos Pereira</h3>
+                    <p>"Atendimento de primeira qualidade! Com certeza virei cliente fiel. Ambiente agradável e profissionais competentes."</p>
+                </div>
+            </div>
+            
+        </div>
+        <button class="carousel-control prev">←</button>
+        <button class="carousel-control next">→</button>
+    </section>
+<!--formulario interação do cliente -->
+    <section class="contact-section">
+        <div class="contact-overlay"></div>
+        <div class="contact-container">
+          <h2>Entre em Contato</h2>
+          <form class="contact-form" action="#">
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+  <!--contato e endereço -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>Sobre Nós</h2>
+        <p>Breve descrição sobre a empresa, sua missão, visão e valores. Um parágrafo que reflita a essência do negócio.</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+  
+      <div class="footer-section links">
+        <h2>Links Rápidos</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contact">
+        <h2>Contato</h2>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Rua Principal, Cidade, País</p>
+        <p><i class="fas fa-phone"></i> +55 11 1234-5678</p>
+        <p><i class="fas fa-envelope"></i> contato@empresa.com</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Nome da Empresa. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="https://link-para-o-site-do-criador.com">Ruan Torres</a></p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20um%20serviço." 
+   class="whatsapp-link" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+  
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/35f77f5e81.js" crossorigin="anonymous"></script>
+    <!-- Script do Carrossel -->
+    <script src="assets/js/carousel.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3ubEfBf8fjgXWjPL4jT6/8w4DPAB/Ssy65NSt" crossorigin="anonymous">
+
+</body>
+</html>

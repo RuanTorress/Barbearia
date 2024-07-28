@@ -1,0 +1,886 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+#navbar {
+    background-color: #333; /* Cor de fundo do navbar */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; }
+
+
+.logo {
+    color: #fff; /* Cor do texto do logotipo */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espaçamento entre a imagem e o texto */
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem; /* Tamanho do texto do título ajustado */
+    color: #EC8C08; /* Cor do texto do título */
+    margin: 0; /* Remove o margin para alinhar com a imagem */
+    font-weight: 700;
+}
+.logo img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    animation: moveLogo 2s infinite alternate;
+}
+
+@keyframes moveLogo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+
+.navbar-items {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-items li {
+    margin-left: 20px;
+}
+
+.navbar-items a {
+    text-decoration: none;
+    color: #fff; /* Cor do texto dos links */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-items a:hover {
+    background-color: #EC8C08; /* Cor de fundo ao passar o mouse */
+    color: #333; /* Cor do texto ao passar o mouse */
+}
+
+
+
+/* Showcase  bane do site*/
+#showcase {
+    position: relative;
+    height: 70vh; /* Ajuste a altura conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: var(--text-color);
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+#carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 500%; /* Se houver 5 imagens */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que as imagens preencham o contêiner */
+    opacity: 0.7; /* Ajuste a opacidade conforme necessário */
+}
+
+#showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 1;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+#showcase-container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px; /* Ajuste para controlar a largura máxima do conteúdo */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    animation: fadeIn 2s ease-out;
+}
+
+#showcase h2 {
+    font-size: 2.5rem; /* Ajuste conforme necessário */
+    margin-bottom: 20px; /* Espaçamento entre o título e o parágrafo */
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards 0.5s;
+}
+
+#showcase p {
+    font-size: 1.2rem; /* Ajuste conforme necessário */
+    margin-bottom: 30px; /* Espaçamento entre o parágrafo e o botão */
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards 1s;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem; /* Ajuste conforme necessário */
+    color: var(--fundo);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards 1.5s;
+    
+}
+
+.btn:hover {
+    background-color: var(--text-color);
+    color: var(--fundo);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/*area de serviso*/ 
+#servicos {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.headline {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--fundo);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(-50px) scale(0.8); /* Inicia acima e menor */
+    animation: slideScaleFadeIn 1s ease-out forwards; /* Animação composta */
+    animation-delay: 0.5s; /* Atraso de meio segundo */
+    overflow: hidden;
+}
+
+/* Keyframes para a animação composta */
+@keyframes slideScaleFadeIn {
+    0% {
+        transform: translateY(-50px) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0) scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Estilo geral para seções com imagem de fundo */
+#servicos, #features {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito de paralaxe */
+    color: var(--text-color);
+    padding: 50px 0; /* Espaçamento interno */
+}
+
+#servicos {
+    background-image: url('../images/clientes/imgDofundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
+}
+
+#features {
+    background-image: url('../images/clientes/imgDofundo.jpg'); /* Substitua pelo caminho correto da sua imagem */
+}
+
+/* Overlay para garantir legibilidade do texto */
+#servicos::before, #features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 1;
+}
+
+/* Container para o conteúdo */
+#servicos .headline, #features .headline, 
+#servicos .servicos-container, #features .testimonials-container {
+    position: relative;
+    z-index: 2;
+    text-align: center; /* Centraliza o texto */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo da headline */
+.headline {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--button-color); /* Cor destacada */
+}
+
+/* Ajuste para o conteúdo */
+.servicos-container, .testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Ajuste para o serviço item  */
+.servico-item {
+    background: #fff;/* cor de barra dos itens */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 250px;
+    text-align: center;
+    z-index: 2; /* Garante que os itens fiquem acima do overlay */
+}
+
+.servico-item:hover {
+    transform: scale(1.05);
+}
+
+.servico-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.servico-item h3 {
+    margin: 15px 0;
+    color: var(--fundo);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.servico-item p {
+    padding: 0 10px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+
+
+/* Depoimentos dos clientes */
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.testimonial {
+    background-color: var(--fundo-secundario);
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.testimonial-content h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--button-color);
+}
+
+.testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Estilos para os botões de navegação */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*formulario interação*/
+
+.contact-section {
+    position: relative;
+    background-image: url('../images/clientes/formulario.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+    color: #f1f1f1;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay para contraste de texto */
+    z-index: 1;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto 0 auto; /* Alinha à direita */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-out; /* Animação de entrada */
+    right: 10%;
+    transform: translateX(10%);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contact-container h2 {
+    text-align: left; /* Texto alinhado à esquerda */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+.contact-form .submit-button {
+    display: inline-block;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #e5533d;
+}
+/* Contact Section Base */
+.contact-section {
+    position: relative;
+    background-image: url('../images/clientes/formulario.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: #f1f1f1;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay para contraste de texto */
+    z-index: 1;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    margin: 0 auto 0 auto; /* Alinha à direita */
+    padding: 20px;
+    background-color: rgba(77, 74, 74, 0.582);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 2s ease-out; /* Animação de entrada */
+    right: 10%;
+    transform: translateX(10%);
+    
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contact-container h2 {
+    text-align: left; /* Texto alinhado à esquerda */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #EC8C08;
+    animation: fadeInUp 8.5s ease-out forwards;
+    opacity: 0;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #EC8C08;
+    transition: color 0.3s;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffffffa4;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #EC8C08;
+    outline: none;
+}
+
+.contact-form .submit-button {
+    display: inline-block;
+    background-color: #EC8C08;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contact-form .submit-button:hover {
+    background-color: #2c2927;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+}
+
+.contact-form .submit-button:hover::before {
+    opacity: 1;
+}
+
+/* Footer do contato */
+.footer {
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    animation: animateBg 20s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes animateBg {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+  }
+  
+  .footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+  }
+  
+  .footer-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #ff6347;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  .footer-section h2:hover::after {
+    width: 100px;
+  }
+  
+  .footer-section p, .footer-section a {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  .footer-section a:hover {
+    color: #fff;
+  }
+  
+  .footer-section .socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .footer-section .socials a {
+    margin-right: 15px;
+    color: #ccc;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section .socials a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+  }
+
+
+  /* Footer fim do site */
+  .footer-bottom {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #282828;
+    color: #ccc;
+    font-size: 1rem;
+    position: relative;
+    z-index: 0;
+    border-top: 2px solid #444;
+    box-shadow: 0 -2px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    background-image:   url('../images/clientes/barba.jpg'), 
+                        url('../images/clientes/barba_cabelo.jpg'), 
+                        url('../images/clientes/cabelo.jpg');
+
+    background-size: 33.33%; /* Cada imagem ocupa 1/3 do espaço */
+    background-repeat: no-repeat;
+    background-position: left, center, right; /* Alinha as imagens */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer-bottom a {
+    color: #ff9f00;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.whatsapp-link {
+    position: fixed; /* Fixa o ícone em uma posição na tela */
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da lateral direita */
+    background-color: #25d366; /* Cor de fundo verde do WhatsApp */
+    color: white; /* Cor do ícone */
+    border-radius: 50%; /* Torna o botão circular */
+    padding: 15px; /* Espaçamento interno */
+    font-size: 24px; /* Tamanho do ícone */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar o ícone */
+    z-index: 1000; /* Certifica-se de que o ícone fique acima de outros elementos */
+    text-decoration: none; /* Remove a linha de sublinhado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.whatsapp-link:hover {
+    background-color: #128c7e; /* Cor de fundo ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar-items {
+        flex-direction: column;
+    }
+
+    .servico-item,
+    .testimonial {
+        flex: 1 1 100%;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    #showcase h2 {
+        font-size: 1.5rem;
+    }
+
+    #showcase p {
+        font-size: 1rem;
+    }
+
+    .servico-item img {
+        border-radius: 5px;
+    }
+
+    .testimonial img {
+        max-width: 80px;
+    }
+}
