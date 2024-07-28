@@ -58,6 +58,10 @@ Copiar código
 git push origin minha-feature
 Abra um Pull Request para a branch main.
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 Contato
 Autor: Ruan torres
 Fala comigo: https://ruantorress.github.io/bio-Ruan/
@@ -71,8 +75,6 @@ olha mais  o projeto da barbearia:  ruantorress.github.io/Barbearia-/
               >Ruan Torres</a
             >.
           </p>
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=EBFAFA&size=35&center=true&vCenter=true&width=1000&lines=Welcome!;I'm+Ruan+Torres;I'm+30+years+old;Web+Developer;)](https://git.io/typing-svg)
-<h4 align="center">
 
 [![Supabase](https://img.shields.io/badge/souruandev-273542?style=for-the-badge&logo=supabase&logoColor=white)](https://ruantorress.github.io/Portfolio/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ruanfabio59/)
